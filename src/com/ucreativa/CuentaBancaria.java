@@ -7,12 +7,12 @@ package com.ucreativa;
  * @author juangutierrez
  *
  */
-public class Cuenta {
+public abstract class CuentaBancaria {
 
 	/**
 	 * 
 	 */
-	public Cuenta() {
+	public CuentaBancaria() {
 		// TODO Auto-generated constructor stub
 	}
 
