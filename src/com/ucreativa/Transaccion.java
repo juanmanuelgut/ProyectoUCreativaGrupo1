@@ -7,12 +7,12 @@ package com.ucreativa;
  * @author juangutierrez
  *
  */
-public class Transferencia extends Transaccion{
+public class Transaccion {
 
 	/**
 	 * 
 	 */
-	public Transferencia() {
+	public Transaccion() {
 		// TODO Auto-generated constructor stub
 	}
 

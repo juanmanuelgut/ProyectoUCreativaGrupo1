@@ -7,7 +7,7 @@ package com.ucreativa;
  * @author juangutierrez
  *
  */
-public class CuentaCorriente {
+public class CuentaCorriente extends CuentaBancaria{
 
 	/**
 	 * 

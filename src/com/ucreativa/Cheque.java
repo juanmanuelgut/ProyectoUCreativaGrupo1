@@ -7,12 +7,12 @@ package com.ucreativa;
  * @author juangutierrez
  *
  */
-public class Certificado {
+public class Cheque extends Transaccion{
 
 	/**
 	 * 
 	 */
-	public Certificado() {
+	public Cheque() {
 		// TODO Auto-generated constructor stub
 	}
 
