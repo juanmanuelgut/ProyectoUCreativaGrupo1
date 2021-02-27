@@ -4,7 +4,7 @@
 package com.ucreativa;
 
 /**
- * @author Heinz Gamboa
+ * @author Heinz Gamboa Rodriguez
  *
  */
 public class Pago {
