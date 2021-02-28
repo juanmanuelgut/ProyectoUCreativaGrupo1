@@ -151,12 +151,6 @@ public abstract class CuentaBancaria implements Estado{
 	}
 	
 	//Constructores
-	/**
-	 * 
-	 */
-	public CuentaBancaria() {
-		// TODO Auto-generated constructor stub
-	}
 
 	/**
 	 * @param estaActiva

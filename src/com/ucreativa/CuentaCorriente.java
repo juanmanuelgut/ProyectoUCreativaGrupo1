@@ -88,35 +88,58 @@ public class CuentaCorriente extends CuentaBancaria{
 	public void setUsuariosAutorizados(ArrayList<Usuario> usuariosAutorizados) {
 		this.usuariosAutorizados = usuariosAutorizados;
 	}
-
-	@Override
-	protected Boolean hacerTrasaccion(Transaccion transaccion) {
-		// TODO Auto-generated method stub
-		return true;
-	}
 	
 	//Constructores
-	public CuentaCorriente() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	/**
+	 * @param balanceInicialCuenta
+	 * @param balanceActualCuenta
+	 * @param balanceFlotante
+	 * @param numeroCuenta
+	 * @param arregloTransacciones
+	 * @param arregloTransaccionesFlotantes
+	 * @param tazaInteres
+	 * @param monedaID
 	 * @param siguienteCheque
 	 * @param maximoCheque
 	 * @param saldo
 	 * @param chequesNoCobrados
 	 * @param usuariosAutorizados
 	 */
-	public CuentaCorriente(int siguienteCheque, int maximoCheque, Double saldo,
-			ArrayList<Transaccion> chequesNoCobrados, ArrayList<Usuario> usuariosAutorizados) {
-		super();
+	public CuentaCorriente(Double balanceInicialCuenta, Double balanceActualCuenta, Double balanceFlotante,
+			String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
+			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID,
+			int siguienteCheque, int maximoCheque, Double saldo, ArrayList<Transaccion> chequesNoCobrados,
+			ArrayList<Usuario> usuariosAutorizados) {
+		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, arregloTransacciones,
+				arregloTransaccionesFlotantes, tazaInteres, monedaID);
 		this.siguienteCheque = siguienteCheque;
 		this.maximoCheque = maximoCheque;
 		this.saldo = saldo;
 		this.chequesNoCobrados = chequesNoCobrados;
 		this.usuariosAutorizados = usuariosAutorizados;
 	}
-
+	
+	//Metodos Clase
+	
+	/**
+	 * Este método añade un usuario autorizado a utilizar cuenta y firmar Cheques
+	 * @param usuario
+	 */
+	protected void autorizarUsuario(Usuario usuario) {}
+	
+	
+	/**
+	 * Este método genera una Transacción tipo cheque a nombre del beneficiario
+	 * @param monto
+	 * @param beneficiario
+	 * @return
+	 */
+	protected Boolean generarCheque(Double monto, String beneficiario) {
+		return true;
+	}
+	
+	
 	/**
 	 *Override de la Clase Abstracta
 	 */
@@ -124,6 +147,12 @@ public class CuentaCorriente extends CuentaBancaria{
 	protected Double calculoIntereses(Double balanceCuenta, Double tasaInteres) {
 		// TODO Auto-generated method stub
 		return 10000.00;
+	}
+
+	@Override
+	protected Boolean hacerTrasaccion(Transaccion transaccion) {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 	@Override

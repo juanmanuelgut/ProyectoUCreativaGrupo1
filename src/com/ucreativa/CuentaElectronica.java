@@ -4,6 +4,7 @@
 package com.ucreativa;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 /**
  * @author juangutierrez
@@ -60,45 +61,59 @@ public class CuentaElectronica extends CuentaBancaria implements Encriptacion{
 	}
 	
 	//Contructores
-	
+
 	/**
-	 * 
-	 */
-	public CuentaElectronica() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	
-	
-	/**
+	 * @param balanceInicialCuenta
+	 * @param balanceActualCuenta
+	 * @param balanceFlotante
+	 * @param numeroCuenta
+	 * @param arregloTransacciones
+	 * @param arregloTransaccionesFlotantes
+	 * @param tazaInteres
+	 * @param monedaID
 	 * @param numeroTarjeta
 	 * @param fechaVencimiento
 	 * @param pin
 	 */
-	public CuentaElectronica(String numeroTarjeta, LocalDateTime fechaVencimiento, int pin) {
-		super();
+	public CuentaElectronica(Double balanceInicialCuenta, Double balanceActualCuenta, Double balanceFlotante,
+			String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
+			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID,
+			String numeroTarjeta, LocalDateTime fechaVencimiento, int pin) {
+		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, arregloTransacciones,
+				arregloTransaccionesFlotantes, tazaInteres, monedaID);
 		this.numeroTarjeta = numeroTarjeta;
 		this.fechaVencimiento = fechaVencimiento;
 		this.pin = pin;
 	}
-
+	
+	/**
+	 * Este meetodo se encarga de validar el numero de tarjeta y pin para transacciones en el Cajero Automático
+	 * @param numeroTarjeta
+	 * @param pin
+	 * @return
+	 */
+	protected Boolean autorizarUsoCajeroAutomatico(String numeroTarjeta, int pin) {
+		
+		return false;
+		
+	}
+	
 	@Override
 	protected Boolean hacerTrasaccion(Transaccion transaccion) {
 		// TODO Auto-generated method stub
-		return null;
+		return true;
 	}
-
+	
 	@Override
 	protected Double calculoIntereses(Double balanceCuenta, Double tasaInteres) {
 		// TODO Auto-generated method stub
-		return null;
+		return 256.44;
 	}
 
 	@Override
 	public String generarIdentificador() {
 		// TODO Auto-generated method stub
-		return null;
+		return "37587d9a273cd5a27d2d8fa7acacca51";
 	}
 
 	@Override
@@ -106,6 +121,12 @@ public class CuentaElectronica extends CuentaBancaria implements Encriptacion{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public String toString() {
+		return "CuentaElectronica [12587496333369]";
+	}
+	
 	
 	
 
