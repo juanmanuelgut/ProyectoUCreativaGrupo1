@@ -9,13 +9,11 @@ import java.util.ArrayList;
  * @author juangutierrez
  *
  */
-/**
- * @author juangutierrez
- *
- */
-public class Usuario {
+
+public class Usuario implements Estado{
 	
 	//Atributos
+	private Boolean estado;
 	private String nombreUsuario;
 	private String apellidoUsuario;
 	private String cedula;
@@ -84,6 +82,7 @@ public class Usuario {
 	
 	//Constructores
 	public Usuario(String nombreUsuario, String apellidoUsuario, String cedula, String email, String userName,String password, ArrayList<CuentaBancaria> arregloCuentas) {
+		this.estado = true;
 		this.nombreUsuario = nombreUsuario;
 		this.apellidoUsuario = apellidoUsuario;
 		this.cedula = cedula;
@@ -139,6 +138,25 @@ public class Usuario {
 		return "Usuario [nombreUsuario=" + nombreUsuario + ", apellidoUsuario=" + apellidoUsuario + ", cedula=" + cedula
 				+ ", email=" + email + ", userName=" + userName + ", password=" + password + ", arregloCuentas="
 				+ arregloCuentas + "]";
+	}
+
+	/**
+	 *
+	 */
+	@Override
+	public void changeEstado() {
+		// Cambia el estado de la clase
+		this.estado = !this.estado;
+	}
+
+	/**
+	 *
+	 */
+	@Override
+	public void desplegarEstado() {
+		// imprime en consola el estado de la clase
+		System.out.println("El Estado es:" + String.valueOf(this.estado));
+		
 	}
 	
 	

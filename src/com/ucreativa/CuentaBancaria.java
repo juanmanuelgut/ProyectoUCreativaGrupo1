@@ -9,10 +9,11 @@ import java.util.ArrayList;
  * @author juangutierrez
  *
  */
-public abstract class CuentaBancaria {
+public abstract class CuentaBancaria implements Estado{
 	
+
 	//Atributos
-	private Boolean estaActiva;
+	private Boolean estado;
 	private Double balanceInicialCuenta;
 	private Double balanceActualCuenta;
 	private Double balanceFlotante;
@@ -23,27 +24,21 @@ public abstract class CuentaBancaria {
 	private String monedaID;
 
 	//Getters and Setters
-	
 	/**
-	 * 
+	 * @return the estado
 	 */
-	public CuentaBancaria() {
-		// TODO Auto-generated constructor stub
+	public Boolean getEstado() {
+		return estado;
 	}
 
-	/**
-	 * @return the estaActiva
-	 */
-	public Boolean getEstaActiva() {
-		return estaActiva;
-	}
 
 	/**
-	 * @param estaActiva the estaActiva to set
+	 * @param estado the estado to set
 	 */
-	public void setEstaActiva(Boolean estaActiva) {
-		this.estaActiva = estaActiva;
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
 	}
+
 
 	/**
 	 * @return the balanceInicialCuenta
@@ -156,6 +151,14 @@ public abstract class CuentaBancaria {
 	public void setMonedaID(String monedaID) {
 		this.monedaID = monedaID;
 	}
+	
+	//Constructores
+	/**
+	 * 
+	 */
+	public CuentaBancaria() {
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @param estaActiva
@@ -168,11 +171,10 @@ public abstract class CuentaBancaria {
 	 * @param tazaInteres
 	 * @param monedaID
 	 */
-	public CuentaBancaria(Boolean estaActiva, Double balanceInicialCuenta, Double balanceActualCuenta,
+	public CuentaBancaria(Double balanceInicialCuenta, Double balanceActualCuenta,
 			Double balanceFlotante, String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
 			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID) {
 		super();
-		this.estaActiva = estaActiva;
 		this.balanceInicialCuenta = balanceInicialCuenta;
 		this.balanceActualCuenta = balanceActualCuenta;
 		this.balanceFlotante = balanceFlotante;
@@ -183,9 +185,6 @@ public abstract class CuentaBancaria {
 		this.monedaID = monedaID;
 	}
 
-	/**
-	 * 
-	 */
 	
 	//Métodos Clase 
 	
@@ -205,6 +204,25 @@ public abstract class CuentaBancaria {
 	
 	protected abstract Double calculoIntereses(Double balanceCuenta, Double tasaInteres);
 		
+	/**
+	 *
+	 */
+	@Override
+	public void changeEstado() {
+		// Cambia el estado de la clase
+		this.estado = !this.estado;
+	}
+
+	/**
+	 *
+	 */
+	@Override
+	public void desplegarEstado() {
+		// imprime en consola el estado de la clase
+		System.out.println("El Estado es:" + String.valueOf(this.estado));
+		
+	}
+	
 	
 
 }

@@ -7,7 +7,7 @@ package com.ucreativa;
  * @author juangutierrez
  *
  */
-public class CuentaElectronica extends CuentaBancaria{
+public class CuentaElectronica extends CuentaBancaria implements Encriptacion{
 
 	/**
 	 * 
@@ -27,5 +27,19 @@ public class CuentaElectronica extends CuentaBancaria{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public String generarIdentificador() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void procesarIdentificador(String identificador) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 
 }
