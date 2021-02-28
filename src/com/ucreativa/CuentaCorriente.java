@@ -18,11 +18,6 @@ public class CuentaCorriente extends CuentaBancaria{
 	private Double saldo;
 	private ArrayList<Transaccion> chequesNoCobrados;
 	private ArrayList<Usuario> usuariosAutorizados;
-	
-	/**
-	 * 
-	 */
-	
 
 	/**
 	 * @return the siguienteCheque
@@ -122,10 +117,18 @@ public class CuentaCorriente extends CuentaBancaria{
 		this.usuariosAutorizados = usuariosAutorizados;
 	}
 
+	/**
+	 *Override de la Clase Abstracta
+	 */
 	@Override
 	protected Double calculoIntereses(Double balanceCuenta, Double tasaInteres) {
 		// TODO Auto-generated method stub
 		return 10000.00;
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaCorriente [147852369874]";
 	}
 	
 	

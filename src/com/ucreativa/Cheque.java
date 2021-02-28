@@ -157,4 +157,14 @@ public class Cheque extends Transaccion{
 		return "-Juan M Gutiérrez/n-Heinz Gamboa";
 	}
 
+	/**
+	 *Meetodo toString
+	 */
+	@Override
+	public String toString() {
+		return "Cheque [123456]";
+	}
+	
+	
+
 }

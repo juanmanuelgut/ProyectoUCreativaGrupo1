@@ -31,14 +31,12 @@ public abstract class CuentaBancaria implements Estado{
 		return estado;
 	}
 
-
 	/**
 	 * @param estado the estado to set
 	 */
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
-
 
 	/**
 	 * @return the balanceInicialCuenta
@@ -189,23 +187,34 @@ public abstract class CuentaBancaria implements Estado{
 	//Métodos Clase 
 	
 	/**
+	 * Este método crea una transacciones en el arreglo de Transacciones
 	 * @param transaccion
-	 * @return
+	 * @return String
 	 */
 	protected abstract Boolean hacerTrasaccion(Transaccion transaccion);
 	
-	protected String listarTransacciones() {
+	/**
+	 * Este método hace una lista de todas las tran
+	 * @param arregloTransacciones
+	 * @return
+	 */
+	protected String listarTransacciones(ArrayList<Transaccion> arregloTransacciones) {
 		
-		return "ANadir texto aqui";
+		return "-Fecha: 02-FEB-2021 Monto: $50.32\n-Fecha: 03-FEB-2021 Monto:$32.58";
 		
 	}
+
 	
-	protected void toggleEstaActiva() {}
-	
+	/**
+	 * Este método hace el calculo de Intereses desde el primero de mes a la fecha
+	 * @param balanceCuenta
+	 * @param tasaInteres
+	 * @return
+	 */
 	protected abstract Double calculoIntereses(Double balanceCuenta, Double tasaInteres);
 		
 	/**
-	 *
+	 *Override de la Interface
 	 */
 	@Override
 	public void changeEstado() {
@@ -214,13 +223,18 @@ public abstract class CuentaBancaria implements Estado{
 	}
 
 	/**
-	 *
+	 *Override de la Interface
 	 */
 	@Override
 	public void desplegarEstado() {
 		// imprime en consola el estado de la clase
 		System.out.println("El Estado es:" + String.valueOf(this.estado));
 		
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaBancaria [12369852254]";
 	}
 	
 	
