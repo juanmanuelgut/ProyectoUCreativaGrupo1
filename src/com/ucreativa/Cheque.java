@@ -154,7 +154,7 @@ public class Cheque extends Transaccion{
 	 * @return String
 	 */
 	protected String listUsuariosFirmantes() {
-		return "-Juan M Gutiérrez/n-Heinz Gamboa"
+		return "-Juan M Gutiérrez/n-Heinz Gamboa";
 	}
 
 }
