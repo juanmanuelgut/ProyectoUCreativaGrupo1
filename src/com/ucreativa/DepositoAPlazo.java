@@ -88,4 +88,11 @@ public class DepositoAPlazo extends CuentaBancaria{
 		return 248.63;
 	}
 
+	@Override
+	public String toString() {
+		return "DepositoAPlazo [2548963554]";
+	}
+	
+	
+
 }
