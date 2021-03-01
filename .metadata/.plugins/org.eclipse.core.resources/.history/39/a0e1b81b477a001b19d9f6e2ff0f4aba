@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+import java.util.ArrayList;
+
+/**
+ * @author Heinz Gamboa
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CuentaBancaria myAccounts = new CuentaBancaria();
+		
+		Usuario myUser = new Usuario("John", "Doe", "123456789", "johndoe@test.com", "johndoe01", "password");
+		ArrayList<CuentaBancaria> arregloCuentas)
+	}
+
+}

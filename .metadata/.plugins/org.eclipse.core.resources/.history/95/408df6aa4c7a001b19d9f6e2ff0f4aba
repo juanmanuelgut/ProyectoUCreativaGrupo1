@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+import java.util.ArrayList;
+
+/**
+ * @author Heinz Gamboa
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<CuentaBancaria>  myAccounts = null;
+		Usuario myUser = new Usuario("John", "Doe", "123456789", "johndoe@test.com", "johndoe01", "password",myAccounts);
+		Cheque myCheck = new Cheque(myUser);
+		CuentaCorriente myRegularAccount = new CuentaCorriente(); 
+		CuentaElectronica myElectronicAccount = new CuentaElectronica();
+		DepositoAPlazo myDeposit = new DepositoAPlazo();
+		Login myLogin = new Login(myUser);
+		Pago myPayment = new Pago(myUser);
+		ReponerTarjeta myLostCard = new ReponerTarjeta(myUser);
+		Transaccion myTransaction = new Transaccion(myUser);
+		Transferencia myTransfer = new Transferencia(myUser);
+		
+		//myAccounts.toString();
+		System.out.println(myUser.toString());
+		myCheck.toString();
+		myRegularAccount.toString();
+		myElectronicAccount.toString();
+		myDeposit.toString();
+		myLogin.toString();
+		myPayment.toString();
+		myLostCard.toString();
+		myTransaction.toString();
+		myTransfer.toString();
+	}
+}

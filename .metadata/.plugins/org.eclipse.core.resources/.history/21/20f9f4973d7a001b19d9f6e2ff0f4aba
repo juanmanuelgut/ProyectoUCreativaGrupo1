@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ *
+ */
+public class Login {
+	//Atributos
+	private Usuario usuarioActual;
+	private double expiracionDeSesion;//Indica el tiempo en que la sesion expira si no hay actividad
+	private String dispositivoLogin; 
+	/**
+	 * 
+	 */
+	public Login() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

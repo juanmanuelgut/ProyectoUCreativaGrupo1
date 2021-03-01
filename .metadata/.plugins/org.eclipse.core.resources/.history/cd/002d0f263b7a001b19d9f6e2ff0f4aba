@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ *
+ */
+public class Login {
+	//Atributos
+	private 
+	/**
+	 * 
+	 */
+	public Login() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

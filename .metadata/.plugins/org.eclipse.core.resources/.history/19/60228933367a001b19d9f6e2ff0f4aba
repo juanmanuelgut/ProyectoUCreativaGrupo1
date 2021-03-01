@@ -1,0 +1,65 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ *
+ */
+public class Transferencia extends Transaccion{
+	//Atributos
+	private Usuario usuarioActual;
+	private int tipoTransferencia = 1;//1 entre cuentas del usuario, 2 entre usuarios del banco, 3 sinpe
+	private String cuentaOrigen = "-";
+	private String cuentaDestino = "-"; 
+	
+	//Get Set
+	public Usuario getUsuarioActual() {
+		return usuarioActual;
+	}
+	public void setUsuarioActual(Usuario usuarioActual) {
+		this.usuarioActual = usuarioActual;
+	}
+	public int getTipoTransferencia() {
+		return tipoTransferencia;
+	}
+	public void setTipoTransferencia(int tipoTransferencia) {
+		this.tipoTransferencia = tipoTransferencia;
+	}
+	public String getCuentaOrigen() {
+		return cuentaOrigen;
+	}
+	public void setCuentaOrigen(String cuentaOrigen) {
+		this.cuentaOrigen = cuentaOrigen;
+	}
+	public String getCuentaDestino() {
+		return cuentaDestino;
+	}
+	public void setCuentaDestino(String cuentaDestino) {
+		this.cuentaDestino = cuentaDestino;
+	}
+	
+	/**
+	 * 
+	 */
+	//Constructor
+	public Transferencia(Usuario usuarioSesion) {
+		// TODO Auto-generated constructor stub
+		usuarioActual = usuarioSesion;
+	}
+	
+	@Override
+	public String toString() {
+		return "Clase Transferencia: => " + "Nombre Usuario: "+ usuarioActual.getUserName() + ;
+	}
+	
+	public void datos(String cuentaOrigenCliente, String cuentaDestinoCliente, double monto, int tipoTrans) {
+		//Solicita las cuentas, el monto y el tipo para hacer la transferencia	
+	}
+
+	private boolean verificaFondos(String cuentaOrigenCliente) {
+		//Verifica si la cuenta origen tiene fondos para proceder
+		return true;
+	}
+}

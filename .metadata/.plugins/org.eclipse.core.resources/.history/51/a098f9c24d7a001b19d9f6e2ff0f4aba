@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+import java.util.ArrayList;
+
+/**
+ * @author Heinz Gamboa
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<CuentaBancaria>  myAccounts = null;
+		Usuario myUser = new Usuario("John", "Doe", "123456789", "johndoe@test.com", "johndoe01", "password",myAccounts);
+		Cheque myCheck = new Cheque(myUser);
+		CuentaCorriente myRegularAccount = new CuentaCorriente(); 
+		CuentaElectronica myElectronicAccount = new CuentaElectronica();
+		DepositoAPlazo myDeposit = new DepositoAPlazo();
+		Login myLogin = new Login(myUser);
+		Pago myPayment = new Pago(myUser);
+		ReponerTarjeta myLostCard = new ReponerTarjeta(myUser);
+		Transaccion myTransaction = new Transaccion(myUser);
+		Transferencia myTransfer = new Transferencia(myUser);
+		
+		//myAccounts.toString();
+		System.out.println(myUser.toString());
+		System.out.println(myCheck.toString());
+		System.out.println("Mi cuenta Corriente: => " + myRegularAccount.toString());
+		System.out.println(myElectronicAccount.toString());
+		System.out.println(myDeposit.toString());
+		System.out.println(myLogin.toString());
+		System.out.println(myPayment.toString());
+		System.out.println(myLostCard.toString());
+		System.out.println(myTransaction.toString());
+		System.out.println(myTransfer.toString());
+	}
+}

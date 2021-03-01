@@ -1,0 +1,57 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ * @updated by Heinz Gamboa
+ */
+public class Transaccion {
+	//Atributos
+		private Usuario usuarioActual;
+		private int tipoTransaccion = 0;//0 transacion no definida
+		private String origen = "-";
+		private String destino = "-"; 
+		 
+		//Get Set
+		public Usuario getUsuarioActual() {
+			return usuarioActual;
+		}
+
+		public void setUsuarioActual(Usuario usuarioActual) {
+			this.usuarioActual = usuarioActual;
+		}
+
+		public int getTipoTransaccion() {
+			return tipoTransaccion;
+		}
+
+		public void setTipoTransaccion(int tipoTransaccion) {
+			this.tipoTransaccion = tipoTransaccion;
+		}
+
+		public String getOrigen() {
+			return origen;
+		}
+
+		public void setOrigen(String origen) {
+			this.origen = origen;
+		}
+
+		public String getDestino() {
+			return destino;
+		}
+
+		public void setDestino(String destino) {
+			this.destino = destino;
+		}
+		
+	/**
+	 * 
+	 */
+	public Transaccion() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

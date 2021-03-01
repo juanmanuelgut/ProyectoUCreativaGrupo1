@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ * @updated by Heinz Gamboa
+ */
+public class Transaccion {
+
+	/**
+	 * 
+	 */
+	public Transaccion() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

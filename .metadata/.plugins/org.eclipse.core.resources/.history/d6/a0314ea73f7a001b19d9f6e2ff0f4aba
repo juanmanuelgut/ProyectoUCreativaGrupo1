@@ -1,0 +1,91 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ * @updated by Heinz Gamboa
+ */
+public class Login {
+	//Atributos
+	private Usuario usuarioActual;
+	private double expiracionDeSesion = 500;//Indica el tiempo en que la sesion expira si no hay actividad
+	private String dispositivoLogin = "-"; //Desde que tipo dispositivo se hizo el login
+	private String ipDispositivoLogin = "-";//La direccion IP del dispositivo que loguea
+	private String OSDispositivo;//Sistema operativo del dispositivo
+	private boolean tipoLogin;//0 Web Login, 1 mobile app login
+	
+	//Get Set
+	public Usuario getUsuarioActual() {
+		return usuarioActual;
+	}
+
+	public void setUsuarioActual(Usuario usuarioActual) {
+		this.usuarioActual = usuarioActual;
+	}
+
+	public double getExpiracionDeSesion() {
+		return expiracionDeSesion;
+	}
+
+	public void setExpiracionDeSesion(double expiracionDeSesion) {
+		this.expiracionDeSesion = expiracionDeSesion;
+	}
+
+	public String getDispositivoLogin() {
+		return dispositivoLogin;
+	}
+
+	public void setDispositivoLogin(String dispositivoLogin) {
+		this.dispositivoLogin = dispositivoLogin;
+	}
+
+	public String getIpDispositivoLogin() {
+		return ipDispositivoLogin;
+	}
+
+	public void setIpDispositivoLogin(String ipDispositivoLogin) {
+		this.ipDispositivoLogin = ipDispositivoLogin;
+	}
+
+	public String getOSDispositivo() {
+		return OSDispositivo;
+	}
+
+	public void setOSDispositivo(String oSDispositivo) {
+		OSDispositivo = oSDispositivo;
+	}
+
+	public boolean isTipoLogin() {
+		return tipoLogin;
+	}
+
+	public void setTipoLogin(boolean tipoLogin) {
+		this.tipoLogin = tipoLogin;
+	}
+
+
+	/**
+	 * 
+	 */
+	public Login(Usuario intentoLogin) {
+		// TODO Auto-generated constructor stub
+		//Crea la coneccion con Base Datos, solicita Usuario y Password
+		usuarioActual = intentoLogin;
+	}
+
+	@Override
+	public String toString() {
+		return "Clase Login: usando clase usuario: " + usuarioActual.getUserName();
+	}
+	
+	private boolean validaCredenciales() {
+		//Regresa true o false dependiendo de si las credenciales son validas
+		return true;
+	}
+		
+	private void administraDB() {
+		//Abre y cierra la coneccion con la base de datos para validar usuario 
+	}
+}

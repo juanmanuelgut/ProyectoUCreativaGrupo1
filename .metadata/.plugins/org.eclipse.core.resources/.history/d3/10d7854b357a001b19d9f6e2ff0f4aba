@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ *
+ */
+public class Transferencia extends Transaccion{
+	private Usuario usuarioActual;
+	/**
+	 * 
+	 */
+	public Transferencia() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

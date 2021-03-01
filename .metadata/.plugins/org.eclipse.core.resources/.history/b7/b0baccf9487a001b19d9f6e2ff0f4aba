@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package com.ucreativa;
+
+/**
+ * @author juangutierrez
+ *
+ */
+public class Cheque extends Transaccion{
+
+	/**
+	 * 
+	 */
+	
+
+}
