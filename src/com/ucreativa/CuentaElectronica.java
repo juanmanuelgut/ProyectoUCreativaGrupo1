@@ -3,6 +3,7 @@
  */
 package com.ucreativa;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 public class CuentaElectronica extends CuentaBancaria implements Encriptacion{
 	
 	private String numeroTarjeta;
-	private LocalDateTime fechaVencimiento;
+	private LocalDate fechaVencimiento;
 	private int pin;
 	
 	//Getter y setters
@@ -35,14 +36,14 @@ public class CuentaElectronica extends CuentaBancaria implements Encriptacion{
 	/**
 	 * @return the fechaVencimiento
 	 */
-	public LocalDateTime getFechaVencimiento() {
+	public LocalDate getFechaVencimiento() {
 		return fechaVencimiento;
 	}
 
 	/**
 	 * @param fechaVencimiento the fechaVencimiento to set
 	 */
-	public void setFechaVencimiento(LocalDateTime fechaVencimiento) {
+	public void setFechaVencimiento(LocalDate fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
 
@@ -72,17 +73,14 @@ public class CuentaElectronica extends CuentaBancaria implements Encriptacion{
 	 * @param tazaInteres
 	 * @param monedaID
 	 * @param numeroTarjeta
-	 * @param fechaVencimiento
+	 * @param fechaVencimiento2
 	 * @param pin
 	 */
-	public CuentaElectronica(Double balanceInicialCuenta, Double balanceActualCuenta, Double balanceFlotante,
-			String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
-			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID,
-			String numeroTarjeta, LocalDateTime fechaVencimiento, int pin) {
-		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, arregloTransacciones,
-				arregloTransaccionesFlotantes, tazaInteres, monedaID);
+	public CuentaElectronica(Double balanceInicialCuenta, Double balanceActualCuenta, Double balanceFlotante, String numeroCuenta,Double tazaInteres, String monedaID,
+			String numeroTarjeta, LocalDate fechaVencimiento2, int pin) {
+		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, tazaInteres, monedaID);
 		this.numeroTarjeta = numeroTarjeta;
-		this.fechaVencimiento = fechaVencimiento;
+		this.fechaVencimiento = fechaVencimiento2;
 		this.pin = pin;
 	}
 	

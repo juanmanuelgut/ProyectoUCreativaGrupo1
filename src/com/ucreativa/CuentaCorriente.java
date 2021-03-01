@@ -107,17 +107,12 @@ public class CuentaCorriente extends CuentaBancaria{
 	 * @param usuariosAutorizados
 	 */
 	public CuentaCorriente(Double balanceInicialCuenta, Double balanceActualCuenta, Double balanceFlotante,
-			String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
-			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID,
-			int siguienteCheque, int maximoCheque, Double saldo, ArrayList<Transaccion> chequesNoCobrados,
-			ArrayList<Usuario> usuariosAutorizados) {
-		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, arregloTransacciones,
-				arregloTransaccionesFlotantes, tazaInteres, monedaID);
+			String numeroCuenta, Double tazaInteres, String monedaID,
+			int siguienteCheque, int maximoCheque) {
+		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, tazaInteres, monedaID);
 		this.siguienteCheque = siguienteCheque;
 		this.maximoCheque = maximoCheque;
 		this.saldo = saldo;
-		this.chequesNoCobrados = chequesNoCobrados;
-		this.usuariosAutorizados = usuariosAutorizados;
 	}
 	
 	//Metodos Clase

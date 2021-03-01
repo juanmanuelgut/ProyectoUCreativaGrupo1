@@ -56,11 +56,9 @@ public class DepositoAPlazo extends CuentaBancaria{
 	 * @param plazoDias
 	 */
 	public DepositoAPlazo(Double balanceInicialCuenta, Double balanceActualCuenta, Double balanceFlotante,
-			String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
-			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID,
+			String numeroCuenta,  Double tazaInteres, String monedaID,
 			String nombreCertificado, int plazoDias) {
-		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta, arregloTransacciones,
-				arregloTransaccionesFlotantes, tazaInteres, monedaID);
+		super(balanceInicialCuenta, balanceActualCuenta, balanceFlotante, numeroCuenta,  tazaInteres, monedaID);
 		this.nombreCertificado = nombreCertificado;
 		this.plazoDias = plazoDias;
 	}

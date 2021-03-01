@@ -164,8 +164,7 @@ public abstract class CuentaBancaria implements Estado{
 	 * @param monedaID
 	 */
 	public CuentaBancaria(Double balanceInicialCuenta, Double balanceActualCuenta,
-			Double balanceFlotante, String numeroCuenta, ArrayList<Transaccion> arregloTransacciones,
-			ArrayList<Transaccion> arregloTransaccionesFlotantes, Double tazaInteres, String monedaID) {
+			Double balanceFlotante, String numeroCuenta, Double tazaInteres, String monedaID) {
 		super();
 		this.balanceInicialCuenta = balanceInicialCuenta;
 		this.balanceActualCuenta = balanceActualCuenta;

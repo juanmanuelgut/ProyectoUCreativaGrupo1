@@ -3,6 +3,7 @@
  */
 package com.ucreativa;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ public class Cheque extends Transaccion{
 	private int numeroCheque;
 	private Boolean isCashed;
 	private Boolean canBeCashed;
-	private LocalDateTime fechaHoraCashed;
+	private LocalDate fechaHoraCashed;
 	private ArrayList<Usuario> usuariosFirmantes;
 	
 	//Getters y Setter
@@ -81,14 +82,14 @@ public class Cheque extends Transaccion{
 	/**
 	 * @return the fechaHoraCashed
 	 */
-	public LocalDateTime getFechaHoraCashed() {
+	public LocalDate getFechaHoraCashed() {
 		return fechaHoraCashed;
 	}
 
 	/**
 	 * @param fechaHoraCashed the fechaHoraCashed to set
 	 */
-	public void setFechaHoraCashed(LocalDateTime fechaHoraCashed) {
+	public void setFechaHoraCashed(LocalDate fechaHoraCashed) {
 		this.fechaHoraCashed = fechaHoraCashed;
 	}
 
@@ -127,7 +128,7 @@ public class Cheque extends Transaccion{
 	 * @param usuariosFirmantes
 	 */
 	public Cheque(String beneficiario, int numeroCheque, Boolean isCashed, Boolean canBeCashed,
-			LocalDateTime fechaHoraCashed, ArrayList<Usuario> usuariosFirmantes) {
+			LocalDate fechaHoraCashed, ArrayList<Usuario> usuariosFirmantes) {
 		super();
 		this.beneficiario = beneficiario;
 		this.numeroCheque = numeroCheque;
@@ -162,7 +163,7 @@ public class Cheque extends Transaccion{
 	 */
 	@Override
 	public String toString() {
-		return "Cheque [123456]";
+		return "Cheque a Nombre de " + this.beneficiario + " por un monto de ";
 	}
 	
 	

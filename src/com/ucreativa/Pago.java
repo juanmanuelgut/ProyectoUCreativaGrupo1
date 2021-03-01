@@ -8,8 +8,11 @@ package com.ucreativa;
  *
  */
 public class Pago {
+	
 	//Atributos
 	private Usuario usuarioActual;
+	
+	
 	//Set & Get
 	public Usuario getUsuarioActual() {
 		return usuarioActual;
