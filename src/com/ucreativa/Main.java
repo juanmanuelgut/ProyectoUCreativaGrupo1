@@ -4,6 +4,7 @@
 package com.ucreativa;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 /**
@@ -17,7 +18,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		ArrayList<CuentaBancaria>  myAccounts = new ArrayList<CuentaBancaria>();
 		Usuario myUser = new Usuario("John", "Doe", "123456789", "johndoe@test.com", "johndoe01", "password",myAccounts);
 		
 		ArrayList<Usuario> usuariosFirmantes = new ArrayList<Usuario>();
@@ -31,14 +32,19 @@ public class Main {
 		
 		ArrayList<Transaccion> myTransactions = new ArrayList<Transaccion>();
 		LocalDate checkDate = LocalDate.now().minusDays(7);
-		Cheque myCheck = new Cheque("Juan Gutierrez" , 123, true, false, checkDate, usuariosFirmantes);
-		Transaccion myTransaccion =new Transaccion();
-		Transaccion myTransaction = new Transaccion();
-		Transferencia myTransfer = new Transferencia();
+		LocalDateTime datetimeTransaccion = LocalDateTime.now().minusDays(7);
+		Cheque myCheck = new Cheque("12345",datetimeTransaccion,"Cheque Alquiler Casa",700.00,"Debito",true,"USD","Juan Gutierrez" , 123, true, false, checkDate, usuariosFirmantes);
+		Transaccion myTransaccion1 =new Transaccion("12346",datetimeTransaccion,"Cobro Intereses Moratorios",100.00,"Debito",true,"USD");
+		Transaccion myTransaccion2 = new Transaccion("12347",datetimeTransaccion,"Credito Promoción La Guacamaya",100.00,"Credito",true,"USD");
+		Transferencia myTransfer = new Transferencia("12347",datetimeTransaccion,"Transferencia Cuota Universidad",100.00,"Credito",true,"USD",1,"CR123456789014785","CR123456789032145");
+		myTransactions.add(myCheck);
+		myTransactions.add(myTransaccion1);
+		myTransactions.add(myTransaccion2);
+		myTransactions.add(myTransfer);
 		myRegularAccount.setArregloTransacciones(myTransactions);
 		
 		
-		ArrayList<CuentaBancaria>  myAccounts = new ArrayList<CuentaBancaria>();
+		//Añadir Cuentas a Usuario 
 		myAccounts.add(myRegularAccount);
 		myAccounts.add(myElectronicAccount);
 		myAccounts.add(myDeposit);
@@ -57,7 +63,8 @@ public class Main {
 		System.out.println("Clase Dep�sito: => " + myDeposit.toString());
 		System.out.println(myPayment.toString());
 		System.out.println(myLostCard.toString());
-		System.out.println(myTransaction.toString());
+		System.out.println(myTransaccion1.toString());
+		System.out.println(myTransaccion2.toString());
 		System.out.println(myTransfer.toString()); 
 	}
 }

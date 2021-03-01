@@ -104,14 +104,18 @@ public class Usuario implements Estado{
 	//Métodos Clase
 	
 	/**
+	 * Metodo utilizado para que el usuario se loguee
 	 * @param username
 	 * @param password
 	 */
 	public void login(String username, String password) {
-		//
+		System.out.println("Usuario Logueado!!!");
 	}
 	
 	
+	/**
+	 * método utilizado para terminar sesion
+	 */
 	public void logout(){
 		//
 	}

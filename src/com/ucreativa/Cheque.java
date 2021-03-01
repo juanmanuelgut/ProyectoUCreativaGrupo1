@@ -110,16 +110,21 @@ public class Cheque extends Transaccion{
 	/**
 	 * 
 	 * Métodos Contructores
-	 * 
-	 * 
+
+	/**
+	 * Este método se encarga de setear el atributos canBeCashed a false
+	 * dejando el parametro isCashed en false
 	 */
-	public Cheque() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
+	protected void anularCheque(){}
 	
 	/**
+	 * @param transaccionID
+	 * @param fechaHoraTransaccion
+	 * @param detalleTransaccion
+	 * @param montoTransaccion
+	 * @param tipoTransaccion
+	 * @param isActive
+	 * @param monedaID
 	 * @param beneficiario
 	 * @param numeroCheque
 	 * @param isCashed
@@ -127,9 +132,12 @@ public class Cheque extends Transaccion{
 	 * @param fechaHoraCashed
 	 * @param usuariosFirmantes
 	 */
-	public Cheque(String beneficiario, int numeroCheque, Boolean isCashed, Boolean canBeCashed,
-			LocalDate fechaHoraCashed, ArrayList<Usuario> usuariosFirmantes) {
-		super();
+	public Cheque(String transaccionID, LocalDateTime fechaHoraTransaccion, String detalleTransaccion,
+			Double montoTransaccion, String tipoTransaccion, Boolean isActive, String monedaID, String beneficiario,
+			int numeroCheque, Boolean isCashed, Boolean canBeCashed, LocalDate fechaHoraCashed,
+			ArrayList<Usuario> usuariosFirmantes) {
+		super(transaccionID, fechaHoraTransaccion, detalleTransaccion, montoTransaccion, tipoTransaccion, isActive,
+				monedaID);
 		this.beneficiario = beneficiario;
 		this.numeroCheque = numeroCheque;
 		this.isCashed = isCashed;
@@ -138,12 +146,6 @@ public class Cheque extends Transaccion{
 		this.usuariosFirmantes = usuariosFirmantes;
 	}
 
-	/**
-	 * Este método se encarga de setear el atributos canBeCashed a false
-	 * dejando el parametro isCashed en false
-	 */
-	protected void anularCheque(){}
-	
 	/**
 	 * Este método se encarga de setear los atributos canBeCasheda e isCashed a false
 	 */
@@ -163,7 +165,7 @@ public class Cheque extends Transaccion{
 	 */
 	@Override
 	public String toString() {
-		return "Cheque a Nombre de " + this.beneficiario + " por un monto de ";
+		return "Cheque a Nombre de " + this.beneficiario + " por un monto de " + this.getMontoTransaccion();
 	}
 	
 	
