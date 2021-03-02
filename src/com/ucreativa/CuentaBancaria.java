@@ -170,8 +170,6 @@ public abstract class CuentaBancaria implements Estado{
 		this.balanceActualCuenta = balanceActualCuenta;
 		this.balanceFlotante = balanceFlotante;
 		this.numeroCuenta = numeroCuenta;
-		this.arregloTransacciones = arregloTransacciones;
-		this.arregloTransaccionesFlotantes = arregloTransaccionesFlotantes;
 		this.tazaInteres = tazaInteres;
 		this.monedaID = monedaID;
 	}
@@ -191,9 +189,15 @@ public abstract class CuentaBancaria implements Estado{
 	 * @param arregloTransacciones
 	 * @return
 	 */
-	protected String listarTransacciones(ArrayList<Transaccion> arregloTransacciones) {
+	protected String listarTransacciones() {
+		String listaTransacciones = "";
+		for (Transaccion transaccion : this.arregloTransacciones) {
+			
+			listaTransacciones = listaTransacciones + transaccion.getDetalleTransaccion() + " " + transaccion.getMonedaID() + transaccion.getMontoTransaccion() + "\n";
+			
+		}
+		return listaTransacciones;
 		
-		return "-Fecha: 02-FEB-2021 Monto: $50.32\n-Fecha: 03-FEB-2021 Monto:$32.58";
 		
 	}
 

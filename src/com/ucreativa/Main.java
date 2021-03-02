@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 /**
  * @author Heinz Gamboa
+ * updated by Juan Gutierrez
  *
  */
 public class Main {
@@ -42,6 +43,8 @@ public class Main {
 		myTransactions.add(myTransaccion2);
 		myTransactions.add(myTransfer);
 		myRegularAccount.setArregloTransacciones(myTransactions);
+		
+		System.out.println(myRegularAccount.listarTransacciones());
 		
 		
 		//Añadir Cuentas a Usuario 
