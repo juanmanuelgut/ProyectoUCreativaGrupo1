@@ -1,11 +1,20 @@
 /**
  * 
  */
-package com.ucreativa;
+package com.ucreativa.Transacciones.Usuario;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
+import com.ucreativa.Transacciones.Cheque;
+import com.ucreativa.Transacciones.Pago;
+import com.ucreativa.Transacciones.Transaccion;
+import com.ucreativa.Transacciones.Transferencia;
+import com.ucreativa.Transacciones.cuentas.CuentaBancaria;
+import com.ucreativa.Transacciones.cuentas.CuentaCorriente;
+import com.ucreativa.Transacciones.cuentas.CuentaElectronica;
+import com.ucreativa.Transacciones.cuentas.DepositoAPlazo;
 
 /**
  * @author Heinz Gamboa

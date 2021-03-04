@@ -1,9 +1,12 @@
 /**
  * 
  */
-package com.ucreativa;
+package com.ucreativa.Transacciones.cuentas;
 
 import java.util.ArrayList;
+
+import com.ucreativa.Transacciones.Transaccion;
+import com.ucreativa.Transacciones.Usuario.Usuario;
 
 /**
  * @author juangutierrez

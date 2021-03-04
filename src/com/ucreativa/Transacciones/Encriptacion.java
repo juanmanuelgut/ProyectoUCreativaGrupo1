@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ucreativa;
+package com.ucreativa.Transacciones;
 
 /**
  * @author juangutierrez

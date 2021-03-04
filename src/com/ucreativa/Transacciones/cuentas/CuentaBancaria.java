@@ -1,9 +1,12 @@
 /**
  * 
  */
-package com.ucreativa;
+package com.ucreativa.Transacciones.cuentas;
 
 import java.util.ArrayList;
+
+import com.ucreativa.Transacciones.Estado;
+import com.ucreativa.Transacciones.Transaccion;
 
 /**
  * @author juangutierrez
@@ -189,7 +192,7 @@ public abstract class CuentaBancaria implements Estado{
 	 * @param arregloTransacciones
 	 * @return
 	 */
-	protected String listarTransacciones() {
+	public String listarTransacciones() {
 		String listaTransacciones = "";
 		for (Transaccion transaccion : this.arregloTransacciones) {
 			

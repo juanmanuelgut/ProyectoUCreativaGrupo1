@@ -1,11 +1,13 @@
 /**
  * 
  */
-package com.ucreativa;
+package com.ucreativa.Transacciones;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+
+import com.ucreativa.Transacciones.Usuario.Usuario;
 
 /**
  * @author juangutierrez

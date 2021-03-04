@@ -1,7 +1,9 @@
 /**
  * 
  */
-package com.ucreativa;
+package com.ucreativa.Transacciones;
+
+import com.ucreativa.Transacciones.Usuario.Usuario;
 
 /**
  * @author Heinz Gamboa Rodriguez
